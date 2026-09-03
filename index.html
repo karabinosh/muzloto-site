@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b0810" />
+    <meta name="description" content="МУЗЛОТО в Charlotte — музыкальное шоу, где караоке встречается с лото и танцполом." />
+    <title>МУЗЛОТО — музыкальная игра в Charlotte</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="#top" aria-label="МУЗЛОТО — на главную">
+        <span>МУЗ</span><b>ЛОТО</b>
+      </a>
+      <nav class="desktop-nav" aria-label="Главная навигация">
+        <a href="#how">Как играть</a>
+        <a href="#format">Формат</a>
+        <a href="#private">Для компаний</a>
+      </nav>
+      <a class="header-cta" href="#tickets">Следующая игра <span>↗</span></a>
+      <button class="menu-button" type="button" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </header>
+
+    <div class="mobile-menu" aria-hidden="true">
+      <a href="#how">Как играть</a>
+      <a href="#format">Формат</a>
+      <a href="#private">Для компаний</a>
+      <a href="#tickets">Следующая игра</a>
+    </div>
+
+    <main id="top">
+      <section class="hero">
+        <img class="hero-image" src="muzloto-hero.png" alt="Гости поют и танцуют на музыкальной вечеринке" />
+        <div class="hero-shade"></div>
+        <div class="hero-grid"></div>
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> Музыкальное шоу · Charlotte, NC</p>
+          <h1 aria-label="МУЗЛОТО">
+            <span>МУЗ</span><em>ЛОТО</em>
+          </h1>
+          <p class="hero-line">КАРАОКЕ <i>×</i> ЛОТО <i>×</i> ДИСКОТЕКА</p>
+          <p class="hero-description">Угадывай хиты. Закрывай карточку. Пой громче всех. Здесь не наблюдают — здесь создают шоу.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#tickets">Хочу на игру <span>↗</span></a>
+            <a class="button ghost" href="#how">Как это работает</a>
+          </div>
+        </div>
+
+        <aside class="ticket-stub" id="tickets" aria-label="Информация о следующей игре">
+          <div class="ticket-top">
+            <span>Следующая игра</span>
+            <span class="pulse">анонс скоро</span>
+          </div>
+          <div class="ticket-main">
+            <p>CHARLOTTE</p>
+            <strong>Будь первым<br />в списке гостей</strong>
+            <span>Получите дату, площадку и ранний доступ к билетам.</span>
+          </div>
+          <a href="mailto:sovaevent1@gmail.com?subject=MUZLOTO%20—%20хочу%20на%20следующую%20игру">Получить приглашение <span>→</span></a>
+        </aside>
+
+        <p class="scroll-note">Листай — будет громче <span>↓</span></p>
+      </section>
+
+      <div class="ticker" aria-label="Особенности игры">
+        <div>
+          <span>60 ХИТОВ</span><b>✦</b><span>3 РАУНДА</span><b>✦</b><span>ЖИВЫЕ ЭМОЦИИ</span><b>✦</b><span>ПРИЗЫ</span><b>✦</b>
+          <span>60 ХИТОВ</span><b>✦</b><span>3 РАУНДА</span><b>✦</b><span>ЖИВЫЕ ЭМОЦИИ</span><b>✦</b><span>ПРИЗЫ</span><b>✦</b>
+        </div>
+      </div>
+
+      <section class="how section" id="how">
+        <div class="section-heading reveal">
+          <p class="eyebrow dark"><span></span> Правила проще припева</p>
+          <h2>СЛЫШИШЬ ХИТ.<br /><em>ЛОВИШЬ МОМЕНТ.</em></h2>
+          <p>Это музыкальное лото без скучных цифр. Вместо них — песни, которые невозможно не подпевать.</p>
+        </div>
+        <div class="steps">
+          <article class="step reveal">
+            <span class="step-number">01</span>
+            <div class="step-icon">▦</div>
+            <h3>Бери карточку</h3>
+            <p>В каждой клетке — известный хит. У всех гостей комбинации разные.</p>
+          </article>
+          <article class="step reveal">
+            <span class="step-number">02</span>
+            <div class="step-icon">♪</div>
+            <h3>Угадывай песни</h3>
+            <p>DJ включает фрагменты. Узнал трек — отмечай его и пой вместе со столом.</p>
+          </article>
+          <article class="step reveal accent-card">
+            <span class="step-number">03</span>
+            <div class="step-icon">★</div>
+            <h3>Кричи «МУЗЛОТО!»</h3>
+            <p>Собери выигрышную линию раньше остальных и забирай приз.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="manifesto section" id="format">
+        <div class="manifesto-photo reveal">
+          <img src="muzloto-hero.png" alt="Эмоции гостей музыкального шоу" />
+          <span>НЕ КВИЗ.<br />НЕ КОНЦЕРТ.<br /><b>И ТО, И ДРУГОЕ.</b></span>
+        </div>
+        <div class="manifesto-copy reveal">
+          <p class="eyebrow"><span></span> Один вечер · четыре ощущения</p>
+          <h2>ШОУ, КОТОРОЕ<br />ЛОМАЕТ ЛЁД.</h2>
+          <p>Сначала вы отмечаете песни. Через десять минут подпеваете. Ещё через двадцать — танцуете с людьми, которых сегодня видите впервые.</p>
+          <div class="stats">
+            <div><strong>60</strong><span>узнаваемых хитов</span></div>
+            <div><strong>3</strong><span>динамичных раунда</span></div>
+            <div><strong>100%</strong><span>участия зала</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="audience section">
+        <p class="eyebrow dark reveal"><span></span> Это твой вечер, если…</p>
+        <div class="big-list">
+          <div class="reveal"><span>01</span><p>Любишь узнавать песню <em>с первой секунды</em></p></div>
+          <div class="reveal"><span>02</span><p>Хочешь знакомиться <em>без неловких пауз</em></p></div>
+          <div class="reveal"><span>03</span><p>Предпочитаешь быть <em>внутри шоу</em>, а не смотреть</p></div>
+        </div>
+      </section>
+
+      <section class="private section" id="private">
+        <div class="private-copy reveal">
+          <p class="eyebrow"><span></span> Частные и корпоративные события</p>
+          <h2>ВАША КОМАНДА.<br /><em>НАША ИГРА.</em></h2>
+          <p>Привезём МУЗЛОТО на день рождения, корпоратив или закрытую вечеринку: сценарий, карточки, DJ, ведущий, звук и атмосфера — под ключ.</p>
+          <a class="button primary" href="mailto:sovaevent1@gmail.com?subject=Заказать%20МУЗЛОТО">Заказать своё МУЗЛОТО <span>↗</span></a>
+        </div>
+        <div class="private-badge reveal">
+          <div>YOUR<br />PARTY</div>
+          <span>×</span>
+          <div>MUZ<br />LOTO</div>
+        </div>
+      </section>
+
+      <section class="faq section">
+        <div class="section-heading reveal">
+          <p class="eyebrow dark"><span></span> Коротко о главном</p>
+          <h2>ВОПРОСЫ<br /><em>ПЕРЕД ИГРОЙ</em></h2>
+        </div>
+        <div class="faq-list">
+          <details class="reveal"><summary>Нужно хорошо знать музыку?<span>+</span></summary><p>Нет. Плейлист собран из узнаваемых хитов разных лет и жанров, а главное здесь — азарт и настроение.</p></details>
+          <details class="reveal"><summary>Можно прийти одному?<span>+</span></summary><p>Конечно. Игра быстро знакомит гостей, поэтому уже после первого раунда вы будете частью команды.</p></details>
+          <details class="reveal"><summary>На каком языке проходит шоу?<span>+</span></summary><p>Формат объединяет русскоязычную аудиторию Charlotte, а музыка говорит на всех языках.</p></details>
+          <details class="reveal"><summary>Как узнать дату следующей игры?<span>+</span></summary><p>Следите за @sova.event или напишите нам — мы отправим анонс и ссылку на билеты.</p></details>
+        </div>
+      </section>
+
+      <section class="final-cta">
+        <p>CHARLOTTE, ARE YOU READY?</p>
+        <h2>УСЛЫШИМ<br /><em>ТВОЙ ГОЛОС.</em></h2>
+        <div>
+          <a class="button light" href="mailto:sovaevent1@gmail.com?subject=MUZLOTO%20—%20хочу%20на%20игру">Получить приглашение <span>↗</span></a>
+          <a class="social-link" href="https://www.instagram.com/sova.event" target="_blank" rel="noreferrer">Instagram @sova.event</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <a class="logo" href="#top"><span>МУЗ</span><b>ЛОТО</b></a>
+      <p>Музыкальная игра от SOVA EVENT · Charlotte, NC</p>
+      <div><a href="mailto:sovaevent1@gmail.com">sovaevent1@gmail.com</a><span>© 2026</span></div>
+    </footer>
+  </body>
+</html>
