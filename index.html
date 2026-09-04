@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <script src="content.js"></script>
     <script src="script.js" defer></script>
   </head>
   <body>
@@ -18,17 +19,19 @@
         <span>МУЗ</span><b>ЛОТО</b>
       </a>
       <nav class="desktop-nav" aria-label="Главная навигация">
+        <a href="#why">Почему приходят</a>
         <a href="#how">Как играть</a>
         <a href="#format">Формат</a>
         <a href="#private">Для компаний</a>
       </nav>
-      <a class="header-cta" href="#tickets">Следующая игра <span>↗</span></a>
+      <a class="header-cta" href="#tickets">Ближайшая игра <span>↗</span></a>
       <button class="menu-button" type="button" aria-label="Открыть меню" aria-expanded="false">
         <span></span><span></span>
       </button>
     </header>
 
     <div class="mobile-menu" aria-hidden="true">
+      <a href="#why">Почему приходят</a>
       <a href="#how">Как играть</a>
       <a href="#format">Формат</a>
       <a href="#private">Для компаний</a>
@@ -37,16 +40,16 @@
 
     <main id="top">
       <section class="hero">
-        <img class="hero-image" src="muzloto-hero.png" alt="Гости поют и танцуют на музыкальной вечеринке" />
+        <img class="hero-image" src="muzloto-hero.png" alt="Гости поют и танцуют на музыкальной вечеринке" data-image="heroImage" />
         <div class="hero-shade"></div>
         <div class="hero-grid"></div>
         <div class="hero-copy">
-          <p class="eyebrow"><span></span> Музыкальное шоу · Charlotte, NC</p>
+          <p class="eyebrow"><span></span><b data-bind="eyebrow">Музыкальное шоу · Charlotte, NC</b></p>
           <h1 aria-label="МУЗЛОТО">
-            <span>МУЗ</span><em>ЛОТО</em>
+            <span data-bind="heroTitle">МУЗ</span><em data-bind="heroAccent">ЛОТО</em>
           </h1>
           <p class="hero-line">КАРАОКЕ <i>×</i> ЛОТО <i>×</i> ДИСКОТЕКА</p>
-          <p class="hero-description">Угадывай хиты. Закрывай карточку. Пой громче всех. Здесь не наблюдают — здесь создают шоу.</p>
+          <p class="hero-description" data-bind="heroCopy">Угадывай хиты. Закрывай карточку. Пой громче всех. Здесь не наблюдают — здесь создают шоу.</p>
           <div class="hero-actions">
             <a class="button primary" href="#tickets">Хочу на игру <span>↗</span></a>
             <a class="button ghost" href="#how">Как это работает</a>
@@ -56,14 +59,14 @@
         <aside class="ticket-stub" id="tickets" aria-label="Информация о следующей игре">
           <div class="ticket-top">
             <span>Следующая игра</span>
-            <span class="pulse">анонс скоро</span>
+            <span class="pulse" data-bind="ticketPrice">Ранний доступ</span>
           </div>
           <div class="ticket-main">
-            <p>CHARLOTTE</p>
-            <strong>Будь первым<br />в списке гостей</strong>
-            <span>Получите дату, площадку и ранний доступ к билетам.</span>
+            <p data-bind="venue">CHARLOTTE</p>
+            <strong data-bind="eventDate">АНОНС СКОРО</strong>
+            <span data-bind="eventTime">Время будет объявлено</span>
           </div>
-          <a href="mailto:sovaevent1@gmail.com?subject=MUZLOTO%20—%20хочу%20на%20следующую%20игру">Получить приглашение <span>→</span></a>
+          <a href="mailto:sovaevent1@gmail.com?subject=MUZLOTO%20—%20хочу%20на%20следующую%20игру" data-link="ticketUrl">Получить приглашение <span>→</span></a>
         </aside>
 
         <p class="scroll-note">Листай — будет громче <span>↓</span></p>
@@ -76,6 +79,20 @@
         </div>
       </div>
 
+      <section class="why section" id="why">
+        <div class="why-intro reveal">
+          <p class="eyebrow"><span></span> Не вечер у экрана</p>
+          <h2>ТЫ НЕ ЗРИТЕЛЬ.<br /><em>ТЫ ВНУТРИ ИГРЫ.</em></h2>
+          <p>МУЗЛОТО соединяет азарт игры, энергию караоке и свободу танцпола. Никакой сцены между гостями — весь зал становится одним большим шоу.</p>
+        </div>
+        <div class="why-grid">
+          <article class="why-card reveal"><span>01</span><strong>ХИТЫ, КОТОРЫЕ ЗНАЮТ ВСЕ</strong><p>От любимого ретро до треков, которые звучат прямо сейчас.</p></article>
+          <article class="why-card reveal"><span>02</span><strong>ЛЕГКО ВКЛЮЧИТЬСЯ</strong><p>Правила понятны за минуту. Музыкальное образование не требуется.</p></article>
+          <article class="why-card reveal"><span>03</span><strong>ЖИВОЕ ОБЩЕНИЕ</strong><p>Игра снимает неловкость и знакомит людей естественно.</p></article>
+          <article class="why-card reveal"><span>04</span><strong>ПРИЗЫ И ФИНАЛЬНЫЙ ДРАЙВ</strong><p>Каждый раунд приближает к победе, а вечер заканчивается танцполом.</p></article>
+        </div>
+      </section>
+
       <section class="how section" id="how">
         <div class="section-heading reveal">
           <p class="eyebrow dark"><span></span> Правила проще припева</p>
@@ -86,20 +103,26 @@
           <article class="step reveal">
             <span class="step-number">01</span>
             <div class="step-icon">▦</div>
-            <h3>Бери карточку</h3>
-            <p>В каждой клетке — известный хит. У всех гостей комбинации разные.</p>
+            <h3 data-bind="service1Title">Бери карточку</h3>
+            <p data-bind="service1Text">В каждой клетке — известный хит. У всех гостей комбинации разные.</p>
           </article>
           <article class="step reveal">
             <span class="step-number">02</span>
             <div class="step-icon">♪</div>
-            <h3>Угадывай песни</h3>
-            <p>DJ включает фрагменты. Узнал трек — отмечай его и пой вместе со столом.</p>
+            <h3 data-bind="service2Title">Угадывай песни</h3>
+            <p data-bind="service2Text">DJ включает фрагменты. Узнал трек — отмечай его и пой вместе со столом.</p>
           </article>
           <article class="step reveal accent-card">
             <span class="step-number">03</span>
             <div class="step-icon">★</div>
-            <h3>Кричи «МУЗЛОТО!»</h3>
-            <p>Собери выигрышную линию раньше остальных и забирай приз.</p>
+            <h3 data-bind="service3Title">Кричи «МУЗЛОТО!»</h3>
+            <p data-bind="service3Text">Собери выигрышную линию раньше остальных и забирай приз.</p>
+          </article>
+          <article class="step reveal finale-card">
+            <span class="step-number">04</span>
+            <div class="step-icon">↗</div>
+            <h3 data-bind="service4Title">Выигрывай и танцуй</h3>
+            <p data-bind="service4Text">Забирай приз, поздравляй победителей и оставайся на финальный танцпол.</p>
           </article>
         </div>
       </section>
@@ -134,7 +157,7 @@
         <div class="private-copy reveal">
           <p class="eyebrow"><span></span> Частные и корпоративные события</p>
           <h2>ВАША КОМАНДА.<br /><em>НАША ИГРА.</em></h2>
-          <p>Привезём МУЗЛОТО на день рождения, корпоратив или закрытую вечеринку: сценарий, карточки, DJ, ведущий, звук и атмосфера — под ключ.</p>
+          <p data-bind="aboutText">Привезём МУЗЛОТО на день рождения, корпоратив или закрытую вечеринку: сценарий, карточки, DJ, ведущий, звук и атмосфера — под ключ.</p>
           <a class="button primary" href="mailto:sovaevent1@gmail.com?subject=Заказать%20МУЗЛОТО">Заказать своё МУЗЛОТО <span>↗</span></a>
         </div>
         <div class="private-badge reveal">
@@ -161,8 +184,8 @@
         <p>CHARLOTTE, ARE YOU READY?</p>
         <h2>УСЛЫШИМ<br /><em>ТВОЙ ГОЛОС.</em></h2>
         <div>
-          <a class="button light" href="mailto:sovaevent1@gmail.com?subject=MUZLOTO%20—%20хочу%20на%20игру">Получить приглашение <span>↗</span></a>
-          <a class="social-link" href="https://www.instagram.com/sova.event" target="_blank" rel="noreferrer">Instagram @sova.event</a>
+          <a class="button light" href="mailto:sovaevent1@gmail.com?subject=MUZLOTO%20—%20хочу%20на%20игру" data-link="ticketUrl">Получить приглашение <span>↗</span></a>
+          <a class="social-link" href="https://www.instagram.com/sova.event" target="_blank" rel="noreferrer" data-link="instagram">Instagram <span data-bind="instagram">@sova.event</span></a>
         </div>
       </section>
     </main>
