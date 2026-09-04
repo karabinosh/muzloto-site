@@ -123,7 +123,7 @@ h2 em { color:var(--hot); font-style:normal; }
 .big-list { margin-top:3rem; border-top:2px solid var(--ink); }
 .big-list > div { display:grid; grid-template-columns:70px 1fr; align-items:center; padding:2rem 0; border-bottom:1px solid rgba(11,8,16,.35); }
 .big-list span { font:600 .9rem/1 var(--display); }
-.big-list p { margin:0; font:600 clamp(2.2rem,5vw,5.8rem)/1 var(--display); letter-spacing:-.04em; text-transform:uppercase; }
+.big-list p { min-width:0; margin:0; font:600 clamp(2.2rem,5vw,5.8rem)/1 var(--display); letter-spacing:-.04em; overflow-wrap:anywhere; text-transform:uppercase; }
 .big-list em { color:transparent; font-style:normal; -webkit-text-stroke:1.5px var(--ink); }
 
 .private { display:grid; grid-template-columns:1.1fr .9fr; gap:8vw; align-items:center; color:#fff; background:linear-gradient(135deg,#291127 0%,#0b0810 60%); }
